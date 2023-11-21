@@ -1,0 +1,9 @@
+/home/jack/eclipse_workspace/stock_study/src/main/java/com/pcjavanet/Stock.java
+/home/jack/eclipse_workspace/stock_study/src/main/java/com/pcjavanet/Fetch.java
+/home/jack/eclipse_workspace/stock_study/src/main/java/com/pcjavanet/model/Stock.java
+/home/jack/eclipse_workspace/stock_study/src/main/java/com/pcjavanet/getdata/FetchCaifudongfang.java
+/home/jack/eclipse_workspace/stock_study/src/main/java/com/pcjavanet/analyze/FourDayRed.java
+/home/jack/eclipse_workspace/stock_study/src/main/java/com/pcjavanet/model/DayData.java
+/home/jack/eclipse_workspace/stock_study/src/main/java/com/pcjavanet/tool/HttpUtil.java
+/home/jack/eclipse_workspace/stock_study/src/main/java/com/pcjavanet/tool/ParseUtil.java
+/home/jack/eclipse_workspace/stock_study/src/main/java/com/pcjavanet/tool/JdbcTool.java

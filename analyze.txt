@@ -1,0 +1,47 @@
+莱茵生物
+http://push2his.eastmoney.com/api/qt/stock/kline/get?fields1=f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13&fields2=f51,f52,f53,f54,f55,f56,f57,f58,f59,f60,f61&beg=0&end=20500101&ut=fa5fd1943c7b386f172d6893dbfba10b&rtntype=6&
+secid=0.002166&klt=101&fqt=1&cb=jsonp1699803565943
+    "2023-11-10,7.70,7.74,7.75,7.60,62732,48222321.82,1.95,0.52,0.04,1.23",
+	日期,开盘价，收盘价，最低价，最高价，成交量，成交额，振幅，涨跌幅，涨跌额,换手率
+http://push2his.eastmoney.com/api/qt/stock/kline/get?fields1=f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13&fields2=f51,f52,f53,f54,f55,f56,f57,f58,f59,f60,f61&beg=0&end=20500101&ut=fa5fd1943c7b386f172d6893dbfba10b&rtntype=6&
+secid=0.002166&klt=101&fqt=1&cb=jsonp1699804481258
+深圳科技
+http://push2his.eastmoney.com/api/qt/stock/kline/get?fields1=f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13&fields2=f51,f52,f53,f54,f55,f56,f57,f58,f59,f60,f61&beg=0&end=20500101&ut=fa5fd1943c7b386f172d6893dbfba10b&rtntype=6&
+secid=0.000021&klt=101&fqt=1&cb=jsonp1699803668988
+
+金发科技  600143
+http://push2his.eastmoney.com/api/qt/stock/kline/get?fields1=f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13&fields2=f51,f52,f53,f54,f55,f56,f57,f58,f59,f60,f61&beg=0&end=20500101&ut=fa5fd1943c7b386f172d6893dbfba10b&rtntype=6&
+secid=1.600143&klt=101&fqt=1&cb=jsonp1699805010391
+
+
+大族激光
+
+http://push2his.eastmoney.com/api/qt/stock/kline/get?fields1=f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13&fields2=f51,f52,f53,f54,f55,f56,f57,f58,f59,f60,f61&beg=0&end=20500101&ut=fa5fd1943c7b386f172d6893dbfba10b&rtntype=6&
+secid=0.002008&klt=101&fqt=1&cb=jsonp1699803668988
+
+
+-- DROP TABLE public.day_history;
+
+CREATE TABLE public.day_history (
+	code varchar NOT NULL DEFAULT ''::character varying,
+	"day" timestamp NOT NULL,
+	"open" float8 NOT NULL DEFAULT 0.0,
+	"close" float8 NOT NULL DEFAULT 0.0,
+	low float8 NOT NULL DEFAULT 0.0,
+	hight float8 NOT NULL DEFAULT 0.0,
+	volue float8 NOT NULL DEFAULT 0.0,
+	totalcomit float8 NOT NULL DEFAULT 0.0,
+	change_range float8 NOT NULL DEFAULT 0.0,
+	rise_down_range float8 NOT NULL DEFAULT 0.0,
+	rise_down_total float8 NOT NULL DEFAULT 0.0,
+	change_rate float8 NOT NULL DEFAULT 0.0
+);
+
+
+CREATE TABLE public.stock (
+	market_type int8 NOT NULL,
+	code varchar NOT NULL DEFAULT ''::character varying,
+	"name" varchar NOT NULL DEFAULT ''::character varying,
+	last_update_date timestamp NULL,
+	status int8 NULL DEFAULT 1
+);
