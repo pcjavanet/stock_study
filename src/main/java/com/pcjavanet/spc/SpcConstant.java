@@ -21,4 +21,11 @@ public class SpcConstant {
 
     public static final int SPC_RULE_VALIDATE_PASS = 0;
     public static final int SPC_RULE_VALIDATE_FAIL = 1;
+    public static final int SPC_ZONE_A_VALIDATE_NUM = 2 ; 
+    public static final int SPC_ZONE_A_CHECK_NUM = 3 ; 
+
+    public static final int SPC_UCL_SIGMA_NUM = 3 ;
+    public static final int SPC_LCL_SIGMA_NUM = 3 ;
+
+    
 }

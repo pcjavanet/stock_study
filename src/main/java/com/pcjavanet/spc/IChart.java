@@ -23,15 +23,35 @@ public class IChart {
   }
 
   public double getLcl() {
+    /*
     double cl = this.getCL();
     double lcl = cl - 3 * mrbar / d2;
+    return lcl;
+    */
+    double lclNum = 3.0;
+    double lcl = getDownSigma(lclNum);
     return lcl;
   }
 
   public double getUcl() {
+    /*
     double cl = this.getCL();
     double ucl = cl + 3 * mrbar / d2;
+    return ucl;*/
+    double uclNum = 3.0;
+    double ucl = getUpSigma(uclNum);
     return ucl;
   }
 
+  public double getUpSigma(double sigmaNum) {
+    double cl = this.getCL();
+    double upSigma = cl + mrbar * sigmaNum / d2;
+    return upSigma;
+  }
+
+  public double getDownSigma(double sigmaNum) {
+    double cl = this.getCL();
+    double downSigma = cl - mrbar * sigmaNum / d2;
+    return downSigma;
+  }
 }

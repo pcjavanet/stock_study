@@ -1,5 +1,6 @@
 package com.pcjavanet.spc;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class SpcUtil {
@@ -41,6 +42,19 @@ public class SpcUtil {
     }
   }
 
+  
+  public void prePareRule2(List<SpcCalculateBean> prevList, List<SpcCalculateBean> targetLs,double upTwoSigma, double lowTwoSigma){
+    List<SpcCalculateBean> datas = new ArrayList<SpcCalculateBean>();
+    if ( prevList != null &&  !prevList.isEmpty() ){
+      datas.addAll(prevList);
+    }
+    if ( targetLs != null && ! targetLs.isEmpty() ) {
+      datas.addAll(targetLs);
+      int zoneANum = SpcConstant.SPC_ZONE_A_VALIDATE_NUM;
+      int checkNum = SpcConstant.SPC_ZONE_A_CHECK_NUM;
+      rule2(datas,zoneANum,checkNum,upTwoSigma,lowTwoSigma);
+    }
+  }
   /**
    * Nmae:Zone A.2/3的点距离中心线的距离超过2个sigma(同一侧)
    * datas, order by ASC
